@@ -2,7 +2,7 @@
 
 "use strict";
 
-var GetPocket = require('./node-getpocket');
+var GetPocket = require('./getpocket');
 var Express = require('express');
 var StdIo = require('stdio');
 

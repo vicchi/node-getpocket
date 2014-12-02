@@ -1,5 +1,5 @@
 {
-  "name": "GetPocket",
+  "name": "getpocket",
   "version": "1.0.0",
   "description": "Node.js module for authenticating and accessing the GetPocket API",
   "homepage": "https://github.com/vicchi/node-getpocket",
@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/vicchi/node-getpocket/issues"
   },
-  "main": "node-getpocket.js",
+  "main": "getpocket.js",
   "engines": {
     "node": ">= 0.10.33"
   },
