@@ -1,5 +1,5 @@
 {
-  "name": "getpocket",
+  "name": "node-getpocket",
   "version": "1.0.0",
   "description": "Node.js module for authenticating and accessing the GetPocket API",
   "homepage": "https://github.com/vicchi/node-getpocket",
