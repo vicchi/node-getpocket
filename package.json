@@ -1,0 +1,43 @@
+{
+  "name": "GetPocket",
+  "version": "1.0.0",
+  "description": "Node.js module for authenticating and accessing the GetPocket API",
+  "homepage": "https://github.com/vicchi/node-getpocket",
+  "keywords": [
+    "node",
+    "getpocket",
+    "api"
+  ],
+  "bugs": {
+    "url": "https://github.com/vicchi/node-getpocket/issues"
+  },
+  "main": "node-getpocket.js",
+  "engines": {
+    "node": ">= 0.10.33"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Gary Gale",
+    "email": "gary@vicchi.org",
+    "url": "http://www.garygale.com/"
+  },
+  "contributors": {
+    "name": "Gary Gale",
+    "email": "gary@vicchi.org",
+    "url": "http://www.garygale.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vicchi/node-getpocket"
+  },
+  "license": "BSD",
+  "dependencies": {
+    "request": "^2.49.0"
+  },
+  "devDependencies": {
+    "express": "^4.10.4",
+    "stdio": "^0.2.6"
+  }
+}
