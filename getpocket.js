@@ -172,6 +172,24 @@ GetPocket.prototype = {
         };
         this.send(options, callback);
     },
+    delete: function(params, callback) {
+        if (!params || !params.item_id) {
+            callback(new Error('400 Bad Request - missing params.item_id'), null, null);
+            return false;
+        }
+
+        var actions = [
+            {
+                action: 'delete',
+                item_id: params.item_id,
+                time: new Date().getTime()
+            }
+        ];
+        var options = {
+            actions: actions
+        };
+        this.send(options, callback);
+    },
     _callbackHandler: function(error, response, body, callback) {
         if (error) {
             callback(error, undefined);

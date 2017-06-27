@@ -219,6 +219,20 @@ pocket.archive(params, function(err, resp) {
 });
 ```
 
+### `delete` - Permanently remove an Item from the User's account
+
+`GetPocket.delete` is a helper function to call `GetPocket.send` with the actions neccessary to delete an item.
+This may or may not be helpful to be honest.
+
+```javascript
+var params = {
+    //     item_id: 'item to delete'
+    // };
+pocket.delete(params, function(err, resp) {
+    // check err, resp
+});
+```
+
 ## Changelog
 
 ### 1.0.0
