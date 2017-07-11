@@ -23,11 +23,15 @@
     "email": "gary@vicchi.org",
     "url": "http://www.garygale.com/"
   },
-  "contributors": {
+  "contributors": [{
     "name": "Gary Gale",
     "email": "gary@vicchi.org",
     "url": "http://www.garygale.com/"
-  },
+  }, {
+    "name": "Gonçalo Morais",
+    "email": "gnclmorais@gmail.com",
+    "url": "http://blog.gnclmorais.com"
+  }],
   "repository": {
     "type": "git",
     "url": "https://github.com/vicchi/node-getpocket"
