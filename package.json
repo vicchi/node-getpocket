@@ -16,28 +16,35 @@
     "node": ">= 0.10.33"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "author": {
     "name": "Gary Gale",
     "email": "gary@vicchi.org",
     "url": "http://www.garygale.com/"
   },
-  "contributors": {
+  "contributors": [{
     "name": "Gary Gale",
     "email": "gary@vicchi.org",
     "url": "http://www.garygale.com/"
-  },
+  }, {
+    "name": "Gonçalo Morais",
+    "email": "gnclmorais@gmail.com",
+    "url": "http://blog.gnclmorais.com"
+  }],
   "repository": {
     "type": "git",
     "url": "https://github.com/vicchi/node-getpocket"
   },
   "license": "BSD",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "request": "^2.49.0"
   },
   "devDependencies": {
     "express": "^4.10.4",
-    "stdio": "^0.2.6"
+    "mocha": "^3.4.2",
+    "stdio": "^0.2.6",
+    "yakbak": "github:newcontext/yakbak#feature\/add-option-to-exclude-headers-in-tapename"
   }
 }

@@ -235,6 +235,18 @@ pocket.delete(params, function(err, resp) {
 
 ## Changelog
 
+### 1.0.3
+
+* 2017/07/11 - add test cases for `get` and `delete`.
+
+### 1.0.2
+
+* 2017/07/11 - add integration with TravisCI for upcoming tests.
+
+### 1.0.1
+
+* 2017/07/10 - add `delete` action to the API wrapper.
+
 ### 1.0.0
 
-* 2014/12/2 - this is the first version of `node-getpocket`. Be gentle.
+* 2014/12/02 - this is the first version of `node-getpocket`. Be gentle.

@@ -17,12 +17,16 @@ var OAUTH_ACCESS_URL = '/v3/oauth/authorize';
 //     access_token: 'my-access-token' (required for non authorisation calls)
 // };
 
-function GetPocket(config) {
+function GetPocket(config, root_url) {
     this.config = config;
     this.headers = {
         'Content-Type': 'application/json; charset=UTF-8',
         'X-Accept': 'application/json'
     };
+
+    if (root_url) {
+        ROOT_URL = root_url;
+    }
 }
 
 GetPocket.prototype = {
@@ -154,37 +158,63 @@ GetPocket.prototype = {
     // var params = {
     //     item_id: 'item to archive'
     // };
+    // OR
+    // var params = [{
+    //     item_id: 'item to archive'
+    // }, {
+    //     item_id: 'another item to archive'
+    // }, …];
     archive: function(params, callback) {
-        if (!params || !params.item_id) {
+        var isSingleItem = !Array.isArray(params);
+        if (!params || (isSingleItem && !params.item_id)) {
             callback(new Error('400 Bad Request - missing params.item_id'), null, null);
             return false;
         }
 
-        var actions = [
-            {
-                action: 'archive',
-                item_id: params.item_id,
-                time: new Date().getTime()
+        if (isSingleItem) params = [params];
+
+        var timestamp = new Date().getTime();
+        var actions = params.map(function (item) {
+            if (item.item_id) {
+                return {
+                    action: 'archive',
+                    item_id: item.item_id,
+                    time: timestamp
+                }
             }
-        ];
+        });
+        if (params.length !== actions.length) {
+            callback(new Error('400 Bad Request - missing some params.item_id'), null, null);
+            return false;
+        }
         var options = {
             actions: actions
         };
         this.send(options, callback);
     },
     delete: function(params, callback) {
-        if (!params || !params.item_id) {
+        var isSingleItem = !Array.isArray(params);
+        if (!params || (isSingleItem && !params.item_id)) {
             callback(new Error('400 Bad Request - missing params.item_id'), null, null);
             return false;
         }
 
-        var actions = [
-            {
-                action: 'delete',
-                item_id: params.item_id,
-                time: new Date().getTime()
+        if (isSingleItem) params = [params];
+
+        var timestamp = new Date().getTime();
+        var actions = params.map(function (item) {
+            if (item.item_id) {
+                return {
+                    action: 'delete',
+                    item_id: item.item_id,
+                    time: timestamp
+                }
             }
-        ];
+        });
+        if (params.length !== actions.length) {
+            callback(new Error('400 Bad Request - missing some params.item_id'), null, null);
+            return false;
+        }
         var options = {
             actions: actions
         };
