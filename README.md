@@ -1,4 +1,4 @@
-# node-getpocket
+# node-getpocket [![Build Status](https://travis-ci.org/vicchi/node-getpocket.svg?branch=master)](https://travis-ci.org/vicchi/node-getpocket)
 
 A Pocket API client for Node.js.
 
