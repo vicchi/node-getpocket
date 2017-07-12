@@ -2,6 +2,8 @@
 
 A Pocket API client for Node.js.
 
+[![Build Status](https://travis-ci.org/vicchi/node-getpocket.svg?branch=master)](https://travis-ci.org/vicchi/node-getpocket)
+
 ## Installation
 
 ```bash
